@@ -1,0 +1,10 @@
+#sobre > img {
+  width: 50%;
+
+  border-radius: 50%;
+}
+
+.coluna > ul {
+  text-align: left;
+  padding-left: 20px;
+}

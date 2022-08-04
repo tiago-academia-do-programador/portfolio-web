@@ -1,0 +1,22 @@
+button {
+  padding: 2% 5%;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  padding: 10px 5%;
+
+  background-color: white;
+
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+}
+
+label, input, textarea {
+  font-size: 18px;
+} 
+
+input, textarea {
+  padding: 1%;
+}

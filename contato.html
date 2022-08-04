@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sobre.css">
+  <link rel="stylesheet" href="./css/contato.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="navbar-link" href="index.html">Início</a>
+      <a class="navbar-link" href="sobre.html">Sobre Mim</a>
+      <a class="navbar-link" href="#">Contato</a>
+
+      <a target="_blank" class="btn navbar-link" href="https://github.com/tiagosantini">
+        <span class="btn-text">GitHub</span>
+        <img src="./assets/github.svg" alt="Ícone do GitHub">
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="sobre">
+      <img src="./assets/eu.jpg" alt="Minha foto">
+
+      <h1>Tiago Santini</h1>
+      <p>Meu nome é Tiago, tenho 22 anos, trabalho como instrutor na <strong>Academia do Programador</strong> e sou acadêmico de Ciência da Computação.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Você pode me acompanhar também nas redes sociais:</p>
+
+      <div class="linha">
+        <a target="_blank" class="btn" href="https://github.com/tiagosantini">
+          <span class="btn-text">GitHub</span>
+          <img src="./assets/github.svg" alt="Ícone do GitHub">
+        </a>
+
+        <a target="_blank" class="btn" href="https://linkedin.com/in/tiagosantini">
+          <span class="btn-text">Linkedin</span>
+          <img src="./assets/linkedin.svg" alt="Ícone do Linkedin">
+        </a>
+      </div>
+    </section>
+
+    <section id="formulario-contato" class="mt-5">
+      <h2>Contate-me</h2>
+      <p>Você também pode me contatar diretamente através deste formulário:</p>
+
+      <form id="formulario">
+
+        <div class="coluna mt-5">
+          <label for="email">Endereço de Email</label>
+          <input id="email" type="email">
+        </div>
+
+        <div class="coluna mt-5">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="coluna mt-5">
+          <button type="submit">Enviar</button>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+  
+  <script>
+    const elementoFormulario = document.getElementById("formulario");
+
+    function mostrarMensagem(evento) {
+      evento.preventDefault();
+
+      const elementoEmail = document.getElementById("email");
+      const elementoMensagem = document.getElementById("mensagem");
+
+      if (!elementoEmail.value || !elementoMensagem.value) {
+        return;
+      }
+      
+      console.log(elementoEmail.value);
+      console.log(elementoMensagem.value);
+    }
+
+    // EventListener escuta eventos de variados tipos
+    // dependendo do elemento que o chama
+
+    // eventListener com delegate
+    elementoFormulario?.addEventListener("submit", mostrarMensagem);
+
+    // eventListener com função anônima (callback)
+    elementoFormulario?.addEventListener("submit",  (evento) => {
+      evento.preventDefault();
+
+      const elementoEmail = document.getElementById("email");
+      const elementoMensagem = document.getElementById("mensagem");
+
+      if (!elementoEmail.value || !elementoMensagem.value) {
+        return;
+      }
+
+      console.log(elementoEmail.value);
+      console.log(elementoMensagem.value);
+    });
+
+  </script>
+</body>
+</html>

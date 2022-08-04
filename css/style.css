@@ -1,0 +1,115 @@
+:root {
+  /* tamanho padrão de fonte do navegador */
+  /* responsável por controlar o tamanho da medida "rem" */
+  font-size: 16px;
+
+  /* Variável css (deve ser declarada no root) */
+  --primary-text-border: #000000;
+  --body-background: #ececec;
+  --main-background: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-background);
+
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-border);
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+#introducao > h1 {
+  font-size: 2.5rem;
+}
+
+#icone-github {
+  width: auto;
+}
+
+#links {
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 10px 5%;
+  
+  background-color: var(--main-background);
+  color: var(--primary-text-border);
+  font-weight: bold;
+
+  border: 1px solid var(--primary-text-border);
+  border-radius: 1rem;
+}
+
+.btn > .btn-text {
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 2% 25%;
+  padding: 2% 5%; 
+
+  text-align: center;
+  
+  background-color: var(--main-background);
+  border-radius: 1rem;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+
+  background-color: var(--main-background);
+
+  font-size: 17px;
+  padding: 10px 25%;
+}
+
+.navbar > .navbar-link {
+  margin: auto 2%;
+
+  font-weight: bold;
+}
+
+.navbar > .navbar-link:last-of-type {
+  margin-left: auto;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
